@@ -1,0 +1,14 @@
+DESCRIPTION="Midnight Commander"
+HOMEPAGE="http://www.midnight-commander.org/"
+SRC_URI="http://www.midnight-commander.org/downloads/${P}.tar.lzma"
+
+PATCH_URI="fedora/mc-extensions.patch
+           fedora/mc-mcviewsegfault.patch
+           4.7.5.2-ncursesw-term.h.patch
+"
+
+CYGCONF_ARGS="
+	--with-screen=ncursesw
+	--enable-charset
+	--enable-vfs-undelfs
+"
